@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KasbCars || سيارات قصب</title>
+    <link
+      rel="shortcut icon"
+      href="src/imgs/kasbcarslogo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+   
+    <div class="nav-bar">
+      <div class="nav-bar-container">
+        <div class="nav-bar-logo">
+          <h1>kasbcars</h1>
+          <div class="icon-menu-remove">
+            <iconify-icon
+              icon="mdi:menu"
+              id="tool-icon-menu"
+              style="display: none"
+              class="tool-icon-menu"
+            ></iconify-icon>
+            <iconify-icon
+              icon="mdi:remove"
+              id="tool-icon-remove"
+              class="tool-icon-remove"
+              style="display: none"
+            ></iconify-icon>
+          </div>
+        </div>
+        <nav class="nav-bar-links">
+          <ul class="nav-bar-links-list">
+            <li class="nav-bar-link"><a href="#">Home</a></li>
+            <li class="nav-bar-link"><a href="#">About</a></li>
+            <li class="nav-bar-link"><a href="#">Services</a></li>
+            <li class="nav-bar-link"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-bar-tools">
+          <iconify-icon
+            icon="mdi:cart"
+            width="24"
+            class="tool-icon"
+          ></iconify-icon>
+          <iconify-icon
+            icon="mdi:heart"
+            width="24"
+            class="tool-icon"
+          ></iconify-icon>
+          <iconify-icon
+            icon="mdi:search"
+            width="24"
+            class="tool-icon"
+          ></iconify-icon>
+          <iconify-icon
+            icon="mdi:user"
+            width="24"
+            class="tool-icon"
+          ></iconify-icon>
+          <iconify-icon
+            icon="mdi:language"
+            width="24"
+            id="Lang-icon"
+            class="tool-icon"
+          ></iconify-icon>
+        </div>
+      </div>
+      <div class="mobile-app" id="mobile-app">
+        <nav class="nav-bar-links-res">
+          <ul class="nav-bar-links-list-res">
+            <li class="nav-bar-link"><a href="#">Home</a></li>
+            <li class="nav-bar-link"><a href="#">About</a></li>
+            <li class="nav-bar-link"><a href="#">Services</a></li>
+            <li class="nav-bar-link"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-bar-tools-res">
+          <iconify-icon icon="mdi:cart" class="tool-icon"></iconify-icon>
+          <iconify-icon icon="mdi:heart" class="tool-icon"></iconify-icon>
+          <iconify-icon
+            icon="mdi:search"
+            width="24"
+            class="tool-icon"
+          ></iconify-icon>
+          <iconify-icon icon="mdi:user" class="tool-icon"></iconify-icon>
+          <iconify-icon icon="mdi:language" onclick="Togglelang()" class="tool-icon"></iconify-icon>
+        </div>
+      </div>
+    </div>
+    <div class="section-hero">
+      <div class="sec-hero-title">
+        <h1 class="hero-text">kasb cars</h1>
+      <p class="hero-pragraph">Kasb Cars offers distinctive Toyota cars combining quality and high performance</p>
+      <button class="hero-btn">learn more</button>
+      </div>
+      <div class="sec-hero-img">
+        <img src="src/imgs/touytawhite-removebg-preview.png" alt="touytawhite">
+      </div>
+    </div>
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
