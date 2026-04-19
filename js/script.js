@@ -55,13 +55,31 @@ UpdateFav();
 
 let CartShopIcon = document.getElementById("toast");
 let FavIcon = document.getElementById("HeartIcon");
+let MobileCartIcon = document.getElementById("mobile-cart-icon");
+let MobileHeartIcon = document.getElementById("mobile-heart-icon");
+let MobileUserIcon = document.getElementById("mobile-user-icon");
 console.log(CartShopApi);
 CartShopIcon.addEventListener("click", () => {
   SidebarCarts.classList.toggle("active");
 });
+if (MobileCartIcon) {
+  MobileCartIcon.addEventListener("click", () => {
+    SidebarCarts.classList.toggle("active");
+  });
+}
 FavIcon.addEventListener("click", () => {
   SidebarFav.classList.toggle("active");
 });
+if (MobileHeartIcon) {
+  MobileHeartIcon.addEventListener("click", () => {
+    SidebarFav.classList.toggle("active");
+  });
+}
+if (MobileUserIcon) {
+  MobileUserIcon.addEventListener("click", () => {
+    window.location.href = "login.html";
+  });
+}
 
 // document.addEventListener("click", (e) => {
 //   if (!SidebarCarts.contains(e.target) && !CartShopIcon.contains(e.target)) {
@@ -312,19 +330,28 @@ function addCartEventListeners(cars) {
 }
 let mobilApp = document.getElementById("mobile-app");
 let Menuicon = document.getElementById("tool-icon-menu");
-let Removeicon = document.getElementById("tool-icon-remove");
-Menuicon.addEventListener("click", () => {
+let CloseNav = document.getElementById("closenav");
+
+// فتح
+function openMobileMenu() {
   mobilApp.classList.add("active");
-  Menuicon.style.display = "none";
-  Removeicon.style.display = "block";
-});
-Removeicon.addEventListener("click", () => {
+  document.body.classList.add("no-scroll"); // 🔒 وقف السكرول
+}
+
+// قفل
+function closeMobileMenu() {
   mobilApp.classList.remove("active");
-  Removeicon.style.display = "none";
-  Menuicon.style.display = "block";
+  document.body.classList.remove("no-scroll"); // 🔓 رجع السكرول
+}
+
+// events
+Menuicon.addEventListener("click", openMobileMenu);
+CloseNav.addEventListener("click", closeMobileMenu);
+
+// يقفل لما تدوس لينك
+document.querySelectorAll(".nav-bar-links-res a").forEach((link) => {
+  link.addEventListener("click", closeMobileMenu);
 });
-Removeicon.style.display = "none";
-Menuicon.style.display = "block";
 //Language
 let LanguageIcon = document.getElementById("Lang-icon");
 const translations = {
@@ -353,6 +380,7 @@ const translations = {
     footer_link_terms: "Terms of Service",
     footer_link_privacy: "Privacy Policy",
     footer_link_support: "Support",
+    nav_lang: "Language",
   },
   ar: {
     nav_home: "الرئيسية",
@@ -379,6 +407,7 @@ const translations = {
     footer_link_terms: "شروط الخدمة",
     footer_link_privacy: "سياسة الخصوصية",
     footer_link_support: "الدعم",
+    nav_lang: "اللغة",
   },
 };
 let currentLang = localStorage.getItem("lang") || "en";
@@ -398,16 +427,33 @@ function setLanguage(lang) {
     }
   });
   if (LanguageIcon) {
-    LanguageIcon.title = currentLang === "en" ? "عربي" : "English";
+    const titleText = currentLang === "en" ? "عربي" : "English";
+    LanguageIcon.title = titleText;
     LanguageIcon.style.color = currentLang === "en" ? "#222" : "#ff3c3c";
+    if (mobileLangIcon) {
+      mobileLangIcon.title = titleText;
+      mobileLangIcon.style.color = currentLang === "en" ? "#222" : "#ff3c3c";
+    }
   }
 }
 function Togglelang() {
   setLanguage(currentLang === "en" ? "ar" : "en");
 }
+let mobileLangBtn = document.getElementById("mobile-lang-btn");
+let mobileLangIcon = document.getElementById("Lang-icon-res");
+
+
+
 if (LanguageIcon) {
   LanguageIcon.addEventListener("click", Togglelang);
 }
+if (mobileLangBtn) {
+  mobileLangBtn.addEventListener("click", Togglelang);
+}
+if (mobileLangIcon) {
+  mobileLangIcon.addEventListener("click", Togglelang);
+}
+
 setLanguage(currentLang);
 let SeeAll = document.getElementById("seeAll");
 let Loginuser = document.getElementById("icon-userlogin");

@@ -26,6 +26,9 @@ body.dark {
   --border-color: #333;
   --primary-color: #ff3c3c;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--bg);
@@ -425,38 +428,67 @@ html {
     margin-top: 10px;
   }
   .mobile-app {
-    background-color: var(--bg);
     position: fixed;
-    top: 60px;
-    right: 100%;
+    top: 0;
+    right: -100%; /* مخفي */
     width: 100%;
-    height: 30vh;
-    padding: 20px;
+    height: 100vh;
+
+    background: var(--bg);
+    color: var(--text);
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    transition: all 0.5s ease-in;
+    justify-content: space-between;
+
+    padding: 40px 20px;
     z-index: 999;
-    overflow: hidden;
+
+    transition: right 0.4s ease;
   }
-  .nav-bar-links-res,
+
+  /* لما يتفتح */
+  .mobile-app.active {
+    /* display: flex; */
+    right: 0;
+  }
+  .mobile-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+
+  .close-menu {
+    font-size: 30px;
+    color: var(--text);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .close-menu:hover {
+    color: var(--accent);
+    transform: rotate(90deg) scale(1.1);
+  }
   .nav-bar-links-list-res {
     display: flex;
     flex-direction: column;
-    padding-bottom: 10px;
+    gap: 25px;
   }
   .nav-bar-link {
     list-style: none;
   }
-  .nav-bar-link a {
-    position: relative;
+  .nav-bar-link a,
+  .nav-bar-link button {
     text-decoration: none;
     color: var(--text);
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
-
-    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .nav-bar-link a:hover {
+    color: var(--accent);
   }
   .nav-bar-link a::after {
     content: "";
@@ -475,11 +507,48 @@ html {
     display: flex;
     gap: 10px;
   }
+  .nav-lang-btn {
+    width: 100%;
+    text-align: left;
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    color: var(--text);
+    padding: 12px 15px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .nav-lang-btn:hover {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+  }
   .icon-menu-remove {
     display: flex;
   }
   .tool-icon {
     font-size: 28px;
+  }
+  .nav-bar-tools-res {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 15px;
+    border-top: 1px solid var(--bg-secondary);
+  }
+
+  .nav-bar-tools-res .tool-icon {
+    font-size: 28px;
+    color: var(--text);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .nav-bar-tools-res .tool-icon:hover {
+    color: var(--accent);
+    transform: scale(1.1);
   }
 }
 .section-hero {

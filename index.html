@@ -22,15 +22,13 @@
             <iconify-icon
               icon="mdi:menu"
               id="tool-icon-menu"
-              style="display: none"
               class="tool-icon-menu"
             ></iconify-icon>
-            <iconify-icon
+            <!-- <iconify-icon
               icon="mdi:remove"
               id="tool-icon-remove"
               class="tool-icon-remove"
-              style="display: none"
-            ></iconify-icon>
+            ></iconify-icon> -->
           </div>
         </div>
         <nav class="nav-bar-links">
@@ -73,27 +71,31 @@
           ></iconify-icon>
         </div>
       </div>
-      <div class="mobile-app" id="mobile-app">
+      <div class="mobile-app" id="mobile-app"><div class="mobile-header">
+    <iconify-icon
+      icon="mdi:close"
+      class="tool-icon close-menu"
+      id="closenav"
+    ></iconify-icon>
+  </div>
         <nav class="nav-bar-links-res">
           <ul class="nav-bar-links-list-res">
-            <li class="nav-bar-link"><a href="#" data-lang-key="nav_home">Home</a></li>
-            <li class="nav-bar-link"><a href="#" data-lang-key="nav_about">About</a></li>
-            <li class="nav-bar-link"><a href="#" data-lang-key="nav_services">Services</a></li>
-            <li class="nav-bar-link"><a href="#" data-lang-key="nav_contact">Contact</a></li>
+            <li class="nav-bar-link"><a href="#home" data-lang-key="nav_home">Home</a></li>
+            <li class="nav-bar-link"><a href="#about" data-lang-key="nav_about">About</a></li>
+            <li class="nav-bar-link"><a href="#shop" data-lang-key="nav_services">Services</a></li>
+            <li class="nav-bar-link"><a href="#footer" data-lang-key="nav_contact">Contact</a></li>
+           
           </ul>
         </nav>
         <div class="nav-bar-tools-res">
-          <iconify-icon icon="mdi:cart" class="tool-icon"></iconify-icon>
-          <iconify-icon icon="mdi:heart" class="tool-icon"></iconify-icon>
-          <iconify-icon
-            icon="mdi:search"
-            width="24"
-            class="tool-icon"
-          ></iconify-icon>
-          <iconify-icon icon="mdi:user" class="tool-icon"></iconify-icon>
+          <iconify-icon icon="mdi:cart" id="mobile-cart-icon" class="tool-icon"></iconify-icon>
+          <iconify-icon icon="mdi:heart" id="mobile-heart-icon toast" class="tool-icon"></iconify-icon>
+        
+          <iconify-icon icon="mdi:user" id="mobile-user-icon" class="tool-icon"></iconify-icon>
           <iconify-icon
             icon="mdi:language"
-            onclick="Togglelang()"
+            width="24"
+            id="Lang-icon-res"
             class="tool-icon"
           ></iconify-icon>
         </div>
