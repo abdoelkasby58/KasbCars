@@ -1,0 +1,122 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        background: linear-gradient(135deg, #ffffff, #1e293b);
+    }
+
+    .reset-box {
+      background: #000000;
+      padding: 30px;
+      width: 340px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+.title-brand{
+    text-align: center;
+    padding: 10px 5px;
+    text-transform: capitalize;
+    color: #fff;
+}
+.title-brand span{
+    color:red;
+
+}
+    .reset-box h2 {
+      margin-bottom: 15px;
+     color: #fff;
+    }
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.toggle-icon {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+  cursor: pointer;
+}
+
+.visibility {
+  display: none;
+}
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+      position: relative;
+    }
+label{
+  text-align: right;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .input-group input:focus {
+      border-color: #2563eb;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .reset-btn {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #2563eb;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .reset-btn:hover {
+      background: #1d4ed8;
+    }
+
+    .message {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .success {
+      color: green;
+    }
+
+    .error-message {
+      font-size: 12px;
+      margin-top: 5px;
+      text-align: start;
+      color: red;
+    }

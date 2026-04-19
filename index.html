@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-   
+    <!-- Nav-Bar -->
+    <div id="toastBox"></div>
     <div class="nav-bar">
       <div class="nav-bar-container">
         <div class="nav-bar-logo">
@@ -34,31 +35,34 @@
         </div>
         <nav class="nav-bar-links">
           <ul class="nav-bar-links-list">
-            <li class="nav-bar-link"><a href="#">Home</a></li>
-            <li class="nav-bar-link"><a href="#">About</a></li>
-            <li class="nav-bar-link"><a href="#">Services</a></li>
-            <li class="nav-bar-link"><a href="#">Contact</a></li>
+            <li class="nav-bar-link"><a href="#home">Home</a></li>
+            <li class="nav-bar-link"><a href="#about">About</a></li>
+            <li class="nav-bar-link"><a href="#shop">Services</a></li>
+            <li class="nav-bar-link"><a href="#footer">Contact</a></li>
           </ul>
         </nav>
         <div class="nav-bar-tools">
           <iconify-icon
+            icon="mdi:heart"
+            id="HeartIcon"
+            width="24"
+            class="tool-icon toastheart"
+          ></iconify-icon>
+          <iconify-icon
             icon="mdi:cart"
             width="24"
-            class="tool-icon"
+            id="toast"
+            class="tool-icon toast"
           ></iconify-icon>
           <iconify-icon
-            icon="mdi:heart"
+            icon="material-symbols:brightness-6"
             width="24"
-            class="tool-icon"
-          ></iconify-icon>
-          <iconify-icon
-            icon="mdi:search"
-            width="24"
-            class="tool-icon"
+            class="tool-icon Togglemood"
           ></iconify-icon>
           <iconify-icon
             icon="mdi:user"
             width="24"
+            id="icon-userlogin"
             class="tool-icon"
           ></iconify-icon>
           <iconify-icon
@@ -87,21 +91,233 @@
             class="tool-icon"
           ></iconify-icon>
           <iconify-icon icon="mdi:user" class="tool-icon"></iconify-icon>
-          <iconify-icon icon="mdi:language" onclick="Togglelang()" class="tool-icon"></iconify-icon>
+          <iconify-icon
+            icon="mdi:language"
+            onclick="Togglelang()"
+            class="tool-icon"
+          ></iconify-icon>
         </div>
       </div>
     </div>
-    <div class="section-hero">
-      <div class="sec-hero-title">
-        <h1 class="hero-text">kasb cars</h1>
-      <p class="hero-pragraph">Kasb Cars offers distinctive Toyota cars combining quality and high performance</p>
-      <button class="hero-btn">learn more</button>
-      </div>
-      <div class="sec-hero-img">
-        <img src="src/imgs/touytawhite-removebg-preview.png" alt="touytawhite">
-      </div>
+
+    <div class="side-bar-carts">
+      <iconify-icon
+        icon="mdi:remove"
+        class="tool-icon-remove-carts"
+      ></iconify-icon>
+    </div>
+    <div class="side-bar-fav">
+      <iconify-icon
+        icon="mdi:remove"
+        class="tool-icon-remove-fav"
+      ></iconify-icon>
     </div>
 
+    <!-- section-hero -->
+    <div class="section-hero" id="home">
+      <div class="sec-hero-title">
+        <h1 class="hero-text">kasb cars</h1>
+        <p class="hero-pragraph">
+          Kasb Cars offers distinctive Toyota cars combining quality and high
+          performance
+        </p>
+        <button class="hero-btn">learn more</button>
+      </div>
+      <div class="sec-hero-img">
+        <img
+          src="src/imgs/logo-toyota.png"
+          class="logo-toyota"
+          alt="logotoyota"
+        />
+
+        <img
+          src="src/imgs/Toyota-Assembly2-removebg-preview.png"
+          class="wheel-img"
+          alt=""
+        />
+        <img
+          src="src/imgs/touytawhite-removebg-preview.png"
+          class="touytawhite"
+          alt="touytawhite"
+        />
+      </div>
+    </div>
+    <!-- Marquee -->
+    <header class="Marquee">
+      <div class="Marquee-one">
+        <div class="text-marquee">
+          <div class="groub">
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+          </div>
+          <div class="groub">
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="Marquee-two">
+        <div class="text-marqueeone">
+          <div class="groub">
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+          </div>
+          <div class="groub">
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+            <img src="src/imgs/logo-toyota.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- About-toyota -->
+    <section class="about-toyota" id="about">
+      <div class="about-toyota-cotain">
+        <h1 class="about-toyota-text">about toyota</h1>
+        <p class="about-toyota-pragraph">
+          Kasb Cars offers distinctive Toyota cars
+        </p>
+        <button class="about-toyota-btn">About to</button>
+      </div>
+    </section>
+    <header class="search-cart-shop">
+      <div class="inp-search">
+        <input
+          type="search"
+          name="search"
+          id="SearchCart"
+          placeholder="search"
+        /><span>
+          <iconify-icon
+            icon="mdi:search"
+            width="24"
+            class="tool-icon"
+          ></iconify-icon>
+        </span>
+      </div>
+      <div class="cart-shop" id="shop"></div>
+    </header>
+    <!-- Marquee -->
+    <div class="Marquee-one">
+      <div class="text-marquee">
+        <div class="groub">
+          <img src="src/imgs/logo-toyota.png" alt="" />
+          <img src="src/imgs/logo-toyota.png" alt="" />
+          <img src="src/imgs/logo-toyota.png" alt="" />
+          <img src="src/imgs/logo-toyota.png" alt="" />
+          <img src="src/imgs/logo-toyota.png" alt="" />
+          <img src="src/imgs/logo-toyota.png" alt="" />
+          <img src="src/imgs/logo-toyota.png" alt="" />
+          <img src="src/imgs/logo-toyota.png" alt="" />
+          <img src="src/imgs/logo-toyota.png" alt="" />
+          <img src="src/imgs/logo-toyota.png" alt="" />
+        </div>
+        <div class="groub">
+          <img src="src/imgs/logo-toyota.png" alt="" />
+          <img src="src/imgs/logo-toyota.png" alt="" />
+          <img src="src/imgs/logo-toyota.png" alt="" />
+          <img src="src/imgs/logo-toyota.png" alt="" />
+          <img src="src/imgs/logo-toyota.png" alt="" />
+          <img src="src/imgs/logo-toyota.png" alt="" />
+          <img src="src/imgs/logo-toyota.png" alt="" />
+          <img src="src/imgs/logo-toyota.png" alt="" />
+          <img src="src/imgs/logo-toyota.png" alt="" />
+          <img src="src/imgs/logo-toyota.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <footer class="footer-toyota" id="footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <div class="footer-one-title">
+            <h1 class="footer-one-text">kasb <span>car</span></h1>
+            <p class="footer-one-pra">find your dream car</p>
+          </div>
+          <div class="footer-one-socialmedia">
+            <iconify-icon
+              icon="mdi:facebook"
+              width="24"
+              class="tool-icon-footer"
+            ></iconify-icon>
+            <iconify-icon
+              icon="mdi:youtube"
+              width="24"
+              class="tool-icon-footer"
+            ></iconify-icon>
+            <iconify-icon
+              icon="mdi:instagram"
+              width="24"
+              class="tool-icon-footer"
+            ></iconify-icon>
+            <iconify-icon
+              icon="mdi:google"
+              width="24"
+              class="tool-icon-footer"
+            ></iconify-icon>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>Home</li>
+            <li>Inventory</li>
+            <li>Featured Cars</li>
+            <li>Finance</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Customer Service</h3>
+          <ul>
+            <li>Help & FAQ</li>
+            <li>Terms of Service</li>
+            <li>Privacy Policy</li>
+            <li>Support</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Subscribe to our newsletter</h3>
+          <p>Stay update with latest offers</p>
+
+          <div class="subscribe">
+            <input type="email" placeholder="Enter your email" />
+            <button>Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2024 CarDeals. All rights reserved.</div>
+    </footer>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="js/script.js"></script>
   </body>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KasbCars || سيارات قصب</title>
+    <link
+      rel="shortcut icon"
+      href="src/imgs/kasbcarslogo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <div class="login-box">
+      <h1 class="title-brand">kasb <span>car</span></h1>
+      <h2>تسجيل الدخول</h2>
+
+<div class="input-group">
+  <label for="emaillogin">البريد الإلكتروني</label>
+  <input
+    type="email"
+    id="emaillogin"
+    placeholder="أدخل بريدك الإلكتروني"
+    required
+  />
+  <small class="error-message" id="email-error"></small>
+</div>
+
+<div class="input-group">
+  <label for="password">كلمة المرور</label>
+  
+  <div class="password-wrapper">
+    <input
+      type="password"
+      id="password"
+      placeholder="أدخل كلمة المرور"
+      required
+    />
+
+    <iconify-icon
+      icon="mdi:hide"
+      width="24"
+      id="Lang-icon-hide"
+      class="toggle-password"
+    ></iconify-icon>
+
+    <iconify-icon
+      icon="mdi:eye"
+      width="24"
+      id="Lang-icon-eye"
+      class="toggle-password-eye visibility"
+    ></iconify-icon>
+  </div>
+
+  <small class="error-message" id="password-error"></small>
+</div>
+
+      <button class="login-btn" id="loginbtn">دخول</button>
+
+      <div class="links">
+        <a href="#" id="pageForgetaccount">هل نسيت كلمة المرور؟</a>
+        <a href="#" id="CreateAccount">إنشاء حساب جديد</a>
+      </div>
+    </div>
+    <script src="js/login.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  </body>
+</html>

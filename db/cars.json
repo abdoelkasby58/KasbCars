@@ -1,0 +1,168 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "brand": "Toyota",
+      "model": "Corolla",
+      "type": "Sedan",
+      "price": 250000,
+      "image": "/src/imgs/toyotacorrolla.png"
+    },
+    {
+      "id": 2,
+      "brand": "Toyota",
+      "model": "Camry",
+      "type": "Sedan",
+      "price": 300000,
+      "image": "/src/imgs/Toyota_Camr.jpg"
+    },
+    {
+      "id": 3,
+      "brand": "Toyota",
+      "model": "Yaris",
+      "type": "Hatchback",
+      "price": 200000,
+      "image": "/src/imgs/Toyota_Yaris.jpg"
+    },
+    {
+      "id": 4,
+      "brand": "Toyota",
+      "model": "Avalon",
+      "type": "Sedan",
+      "price": 350000,
+      "image": "/src/imgs/toyotaAvalon.png"
+    },
+    {
+      "id": 5,
+      "brand": "Toyota",
+      "model": "Prius",
+      "type": "Hybrid",
+      "price": 280000,
+      "image": "/src/imgs/toyota-prius.jpg"
+    },
+
+    {
+      "id": 6,
+      "brand": "Toyota",
+      "model": "RAV4",
+      "type": "SUV",
+      "price": 320000,
+      "image": "/src/imgs/toyota_RAV4.jpg"
+    },
+    {
+      "id": 7,
+      "brand": "Toyota",
+      "model": "Highlander",
+      "type": "SUV",
+      "price": 400000,
+      "image": "/src/imgs/Toyota_Highlander.jpg"
+    },
+    {
+      "id": 8,
+      "brand": "Toyota",
+      "model": "Fortuner",
+      "type": "SUV",
+      "price": 450000,
+      "image": "/src/imgs/toyotafortuner.jpg"
+    },
+    {
+      "id": 9,
+      "brand": "Toyota",
+      "model": "Land Cruiser",
+      "type": "SUV",
+      "price": 700000,
+      "image": "/src/imgs/toytalandcruiser.jpg"
+    },
+    {
+      "id": 10,
+      "brand": "Toyota",
+      "model": "C-HR",
+      "type": "SUV",
+      "price": 270000,
+      "image": "/src/imgs/Toyota_C-HR.jpg"
+    },
+
+    {
+      "id": 11,
+      "brand": "Toyota",
+      "model": "Hilux",
+      "type": "Pickup",
+      "price": 305000,
+      "image": "/src/imgs/Toyota-Hilux.jpg"
+    },
+    {
+      "id": 12,
+      "brand": "Toyota",
+      "model": "Tacoma",
+      "type": "Pickup",
+      "price": 380000,
+      "image": "/src/imgs/Toyota_Tacoma.jpg"
+    },
+    {
+      "id": 13,
+      "brand": "Toyota",
+      "model": "Tundra",
+      "type": "Pickup",
+      "price": 500000,
+      "image": "/src/imgs/Toyota_Tundra.jpg"
+    },
+
+    {
+      "id": 14,
+      "brand": "Toyota",
+      "model": "Supra",
+      "type": "Sport",
+      "price": 550000,
+      "image": "/src/imgs/Toyota_Supra.jpg"
+    },
+    {
+      "id": 15,
+      "brand": "Toyota",
+      "model": "GR86",
+      "type": "Sport",
+      "price": 300000,
+      "image": "/src/imgs/Toyota_GR86.jpg"
+    },
+
+    {
+      "id": 16,
+      "brand": "Toyota",
+      "model": "Venza",
+      "type": "SUV",
+      "price": 330000,
+      "image": "/src/imgs/Toyota_Venza.jpg"
+    },
+    {
+      "id": 17,
+      "brand": "Toyota",
+      "model": "Sequoia",
+      "type": "SUV",
+      "price": 600000,
+      "image": "/src/imgs/Toyota_Sequoia.jpg"
+    },
+    {
+      "id": 18,
+      "brand": "Toyota",
+      "model": "Sienna",
+      "type": "Minivan",
+      "price": 370000,
+      "image": "/src/imgs/Toyota_Sienna.jpg"
+    },
+    {
+      "id": 19,
+      "brand": "Toyota",
+      "model": "Corolla Cross",
+      "type": "SUV",
+      "price": 290000,
+      "image": "/src/imgs/Toyota_Corolla_Cross.jpg"
+    },
+    {
+      "id": 20,
+      "brand": "Toyota",
+      "model": "bZ4X",
+      "type": "Electric",
+      "price": 420000,
+      "image": "/src/imgs/Toyota_bZ4X.jpg"
+    }
+  ]
+}

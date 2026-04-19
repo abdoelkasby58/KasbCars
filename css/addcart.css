@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.data-cart {
+  width: 100%;
+  height: auto;
+  background-color: rgba(253, 241, 129, 0.486);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-data-cart {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-block: 20px;
+}
+.validate-data {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+}
+.validate-data h1 {
+  font-size: 50px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.val-col h2 {
+  font-size: 17px;
+  color: rgb(255, 208, 0);
+  padding-block: 10px;
+}
+.input-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.input-row label {
+  text-transform: capitalize;
+  padding-block: 5px;
+}
+.input-row input {
+  border-radius: 5px;
+  padding: 10px 5px;
+  outline: none;
+  border: none;
+}
+.input-row input::placeholder {
+  text-transform: capitalize;
+  padding-inline: 5px;
+}
+.add-cart-col {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+.add-to-cart {
+    background-color: blanchedalmond;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 10px;
+}
+.add-to-cart img {
+  width: 60%;
+  object-fit: cover;
+}
+.Quantity {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.tool-icon-plus-cart,
+.Qun-span,
+.tool-icon-minus-cart {
+  background-color: rgba(194, 186, 116, 0.486);
+  padding: 5px;
+  margin: 5px;
+  border-radius: 50%;
+  font-size: 15px;
+  cursor: pointer;
+}
+.Qun-span {
+  border-radius: 0px;
+  padding: 10px;
+}
+.cart-data-title {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.747);
+}
+.cart-data-title span {
+  font-size: 22px;
+  color: black;
+}
+.cart-data-price {
+  font-size: 20px;
+color: rgba(0, 0, 0, 0.747);
+}
+.price {
+  font-size: 20px;
+  color: black;
+}
+.hr-cartt {
+  width: 90%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.199);
+  margin-block: 15px;
+}

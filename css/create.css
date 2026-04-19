@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ffffff, #1e293b);
+}
+
+.signup-box {
+  background: #000000;
+  padding: 30px;
+  width: 340px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.title-brand {
+  text-align: center;
+  padding: 10px 5px;
+  text-transform: capitalize;
+  color: #fff;
+}
+.title-brand span {
+  color: red;
+}
+.signup-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+.input-group label{
+  color: #fff;
+  margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #2563eb;
+}
+.toggle-password-create,
+.toggle-password-eye-create {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+  cursor: pointer;
+}
+.visibility {
+  display: none;
+}
+.error-message-create {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.signup-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.signup-btn:hover {
+  background: #1d4ed8;
+}
+
+.links {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
