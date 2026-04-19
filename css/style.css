@@ -1108,7 +1108,10 @@ hr {
   font-weight: 500;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
+.aniimage {
+  user-select: none;
+  transition: transform 0.05s linear;
+}
 /* الرقم */
 #cart-total {
   font-size: 20px;

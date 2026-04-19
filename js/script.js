@@ -1,3 +1,7 @@
+let KasbCars = document.getElementById("KasbCars");
+KasbCars.addEventListener("click", () => {
+  window.location.assign("index.html");
+});
 let togglemoodBtn = document.querySelector(".Togglemood");
 
 togglemoodBtn.addEventListener("click", () => {
@@ -323,20 +327,88 @@ Removeicon.style.display = "none";
 Menuicon.style.display = "block";
 //Language
 let LanguageIcon = document.getElementById("Lang-icon");
-const Lang = {
+const translations = {
   en: {
-    text_one: "Abdo Elkasby",
+    nav_home: "Home",
+    nav_about: "About",
+    nav_services: "Services",
+    nav_contact: "Contact",
+    hero_title: "kasb cars",
+    hero_paragraph: "Kasb Cars offers distinctive Toyota cars combining quality and high performance",
+    hero_button: "learn more",
+    about_title: "about toyota",
+    about_paragraph: "Kasb Cars offers distinctive Toyota cars",
+    about_button: "About to",
+    search_placeholder: "search",
+    footer_brand: "kasb car",
+    footer_tagline: "find your dream car",
+    footer_links_title: "Quick Links",
+    footer_link_home: "Home",
+    footer_link_inventory: "Inventory",
+    footer_link_featured: "Featured Cars",
+    footer_link_finance: "Finance",
+    footer_link_contact: "Contact Us",
+    footer_service_title: "Customer Service",
+    footer_link_help: "Help & FAQ",
+    footer_link_terms: "Terms of Service",
+    footer_link_privacy: "Privacy Policy",
+    footer_link_support: "Support",
   },
   ar: {
-    text_one: "غبدو القصبي",
+    nav_home: "الرئيسية",
+    nav_about: "من نحن",
+    nav_services: "الخدمات",
+    nav_contact: "تواصل",
+    hero_title: "كساب كارز",
+    hero_paragraph: "كساب كارز تقدم سيارات تويوتا مميزة تجمع بين الجودة والأداء العالي",
+    hero_button: "اعرف أكثر",
+    about_title: "عن تويوتا",
+    about_paragraph: "كساب كارز تقدم سيارات تويوتا مميزة",
+    about_button: "تعرف أكثر",
+    search_placeholder: "بحث",
+    footer_brand: "كساب كار",
+    footer_tagline: "اعثر على سيارتك المثالية",
+    footer_links_title: "روابط سريعة",
+    footer_link_home: "الرئيسية",
+    footer_link_inventory: "المخزون",
+    footer_link_featured: "سيارات مميزة",
+    footer_link_finance: "التمويل",
+    footer_link_contact: "تواصل معنا",
+    footer_service_title: "خدمة العملاء",
+    footer_link_help: "المساعدة والأسئلة",
+    footer_link_terms: "شروط الخدمة",
+    footer_link_privacy: "سياسة الخصوصية",
+    footer_link_support: "الدعم",
   },
 };
-let currentLang = "en";
-function Togglelang() {
-  currentLang = currentLang === "en" ? "ar" : "en";
-  let Langdata = Lang[currentLang];
-  Langdata = Lang[key];
+let currentLang = localStorage.getItem("lang") || "en";
+function setLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem("lang", currentLang);
+  document.documentElement.lang = currentLang;
+  document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+  document.querySelectorAll("[data-lang-key]").forEach((el) => {
+    const key = el.dataset.langKey;
+    const value = translations[currentLang][key];
+    if (!value) return;
+    if (el.tagName.toLowerCase() === "input" || el.tagName.toLowerCase() === "textarea") {
+      el.placeholder = value;
+    } else {
+      el.textContent = value;
+    }
+  });
+  if (LanguageIcon) {
+    LanguageIcon.title = currentLang === "en" ? "عربي" : "English";
+    LanguageIcon.style.color = currentLang === "en" ? "#222" : "#ff3c3c";
+  }
 }
+function Togglelang() {
+  setLanguage(currentLang === "en" ? "ar" : "en");
+}
+if (LanguageIcon) {
+  LanguageIcon.addEventListener("click", Togglelang);
+}
+setLanguage(currentLang);
 let SeeAll = document.getElementById("seeAll");
 let Loginuser = document.getElementById("icon-userlogin");
 // SeeAll.onclick = () => {
@@ -355,3 +427,23 @@ function showToast(massage, type = "success") {
     toast.remove();
   }, 3000);
 }
+let facebookicon = document.getElementById("facebookicon");
+let youtubeicon = document.getElementById("youtubeicon");
+let instagramicon = document.getElementById("instagramicon");
+let googleicon = document.getElementById("googleicon");
+facebookicon.addEventListener("click", () => {
+  window.open("https://www.facebook.com/kasbcars", "_blank");
+}
+);
+youtubeicon.addEventListener("click", () => {
+  window.open("https://www.youtube.com/@kasbcars", "_blank");
+}
+);  
+instagramicon.addEventListener("click", () => {
+  window.open("https://www.instagram.com/kasbcars/", "_blank");
+}
+);
+googleicon.addEventListener("click", () => {
+  window.open("https://www.google.com/search?q=kasbcars", "_blank");
+}
+);
