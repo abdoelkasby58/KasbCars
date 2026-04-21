@@ -81,6 +81,11 @@ body {
   font-size: 12px;
   margin-top: 5px;
 }
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
 .signup-btn {
   width: 100%;
   padding: 10px;

@@ -15,7 +15,6 @@
   --primary-color: #ff0000;
 }
 
-/* 🌙 DARK MODE */
 body.dark {
   --bg: #121212;
   --bg-secondary: #1e1e1e;
@@ -37,12 +36,197 @@ body {
     url("../src/imgs/toyota-cursor-48.png") 24 24,
     auto;
 }
+.login-box-create,
+.login-box-forget,
+.login-box-confirm {
+  display: none;
+}
+.login-in-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.login-in-page.activeLog {
+  display: none;
+}
+.remove-icon-login {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #00ff0d;
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.remove-icon-login:hover {
+  color: var(--accent);
+  background: rgba(255, 0, 0, 0.2);
+  transform: scale(1.1);
+}
 
+.login-container {
+  background: #000000;
+  padding: 30px;
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+.title-brand {
+  text-align: center;
+  padding: 10px 5px;
+  text-transform: capitalize;
+  color: #fff;
+}
 /* مثال */
 .nav-bar-container.dark {
   background: #1e1e1e;
 }
+.title-brand span {
+  color: red;
+}
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.input-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+.input-group input:focus {
+  border-color: #2563eb;
+}
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.password-wrapper input {
+  width: 100%;
+}
+.toggle-password,
+.toggle-password-eye {
+  position: absolute;
+  inset-inline-end: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+}
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.visibility {
+  display: none;
+}
+.login-btn:hover {
+  background: #1d4ed8;
+}
 
+.login-btn,
+.send-btn,
+.reset-btn,
+.signup-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.login-btn:hover {
+  background: #1d4ed8;
+}
+
+.links {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+.links a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  margin-top: 5px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+/* login-for */
+.pragraph-login {
+  text-align: center;
+  font-size: 14px;
+  color: #bdbdbd;
+  margin-bottom: 20px;
+}
+/* login-con */
+.input-confirm {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.toggle-icon {
+  color: #555;
+  position: absolute;
+  inset-inline-end: 10px;
+  top: 7px;
+  cursor: pointer;
+}
+/* create-login */
+.text-create {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.toggle-password-create,
+.toggle-password-eye-create {
+  position: absolute;
+  inset-inline-end: 10px;
+  top: 7px;
+  color: #555;
+  cursor: pointer;
+}
+.error-message-create {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
 /* icons */
 .tool-icon {
   cursor: pointer;
@@ -66,8 +250,8 @@ html {
   backdrop-filter: blur(10px);
   background-color: var(--bg-secondary);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 5px;
+  position: relative;
+  top: 0px;
   z-index: 700;
 }
 .nav-bar-container {
@@ -100,6 +284,23 @@ html {
     url("../src/imgs/toyota-cursor-48.png") 24 24,
     auto;
 }
+.cart-total {
+  position: relative;
+}
+.total-all {
+  background-color: red;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
 .nav-bar-links ul li a:hover {
   color: var(--accent);
 }
@@ -119,18 +320,9 @@ html {
   color: var(--accent);
 }
 
-.mobile-app {
-  display: none;
-}
-.mobile-app.active {
-  right: 0;
-}
-.icon-menu-remove {
-  display: none;
-}
 .add-to-cart {
   position: absolute;
-  background-color: #ffe600;
+  background-color: #464225a6;
   width: 400px;
   height: 100vh;
   z-index: 100;
@@ -138,15 +330,48 @@ html {
   right: 0;
 }
 
-.side-bar-carts,
-.side-bar-fav {
+.side-bar-carts-container,
+.side-bar-fav-container {
+  position: fixed;
+  right: -400px;
+  top: 0;
+  display: flex;
+  gap: 15px;
+
+  height: 100vh;
+  z-index: 800;
+  opacity: 0;
+  transition:
+    right 0.4s ease,
+    opacity 0.3s ease;
+}
+.tool-icon-remove-carts,
+.tool-icon-remove-fav {
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #00ff0d;
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tool-icon-remove-carts:hover {
+  color: var(--accent);
+  background: rgba(255, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+.side-bar-carts {
   width: 350px;
   height: 100vh;
   background: #111;
   color: #fff;
-  position: fixed;
-  right: -350px;
-  top: 0;
 
   overflow-y: auto;
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
@@ -156,25 +381,28 @@ html {
   transition:
     right 0.4s ease,
     opacity 0.3s ease;
-  opacity: 0;
-  z-index: 800;
 }
 .side-bar-fav {
+  width: 350px;
+  height: 100vh;
+  background: #111;
+  color: #fff;
+
+  overflow-y: auto;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   transition:
-    left 0.4s ease,
+    right 0.4s ease,
     opacity 0.3s ease;
-  left: -100%;
-  background: #660000;
 }
-.side-bar-carts.active {
+.side-bar-carts-container.active,
+.side-bar-fav-container.active {
   opacity: 1;
   right: 0;
 }
-.side-bar-fav.active {
-  opacity: 1;
-  left: 0;
-}
-.tool-icon-remove-cart,
+/* .tool-icon-remove-cart,
 .tool-icon-remove-fav {
   position: absolute;
   top: 15px;
@@ -190,7 +418,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 .tool-icon-remove-cart {
   right: 15px;
 }
@@ -380,12 +608,12 @@ html {
     opacity: 1;
   }
 }
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .tool-icon-menu,
   .tool-icon-remove {
     display: none;
   }
-}
+} */
 @media (max-width: 768px) {
   .nav-bar {
     display: flex;
@@ -395,89 +623,31 @@ html {
   .nav-bar-container {
     position: relative;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    gap: 5px;
   }
   .nav-bar-logo {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
   .nav-bar-logo h1 {
     font-size: 24px;
   }
-  .tool-icon-menu,
-  .tool-icon-remove {
-    font-size: 24px;
-    display: block;
-    /* cursor: pointer; */
-    cursor:
-      url("../src/imgs/toyota-cursor-48.png") 24 24,
-      auto;
-  }
-  .nav-bar-links {
-    display: none;
-  }
+
   .nav-bar-links-list {
-    display: none;
+    align-items: center;
     flex-direction: column;
     width: 100%;
   }
-  .nav-bar-tools {
-    display: none;
-    margin-top: 10px;
-  }
-  .mobile-app {
-    position: fixed;
-    top: 0;
-    right: -100%; /* مخفي */
-    width: 100%;
-    height: 100vh;
-
-    background: var(--bg);
-    color: var(--text);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    padding: 40px 20px;
-    z-index: 999;
-
-    transition: right 0.4s ease;
-  }
-
-  /* لما يتفتح */
-  .mobile-app.active {
-    /* display: flex; */
-    right: 0;
-  }
-  .mobile-header {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 20px;
-  }
-
-  .close-menu {
-    font-size: 30px;
-    color: var(--text);
-    cursor: pointer;
-    transition: 0.3s;
-  }
-
-  .close-menu:hover {
-    color: var(--accent);
-    transform: rotate(90deg) scale(1.1);
-  }
-  .nav-bar-links-list-res {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+  .nav-bar-links ul {
+    gap: 15px;
   }
   .nav-bar-link {
     list-style: none;
   }
-  .nav-bar-link a,
+  /* .nav-bar-link a,
   .nav-bar-link button {
     text-decoration: none;
     color: var(--text);
@@ -489,8 +659,8 @@ html {
   }
   .nav-bar-link a:hover {
     color: var(--accent);
-  }
-  .nav-bar-link a::after {
+  } */
+  /* .nav-bar-links ul a::after {
     content: "";
     position: absolute;
     background-color: #007bff;
@@ -502,7 +672,7 @@ html {
   }
   .nav-bar-link a:hover::after {
     width: 100%;
-  }
+  } */
   .nav-bar-tools-res {
     display: flex;
     gap: 10px;

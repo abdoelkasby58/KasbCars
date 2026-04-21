@@ -12,31 +12,236 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- Login -->
+ <header class="login-in-page activeLog">
+  <div class="remove-icon-login">
+    <iconify-icon
+      icon="mdi:close"
+      width="24"
+      id="closeLogin"
+      class="tool-icon-remove-login"
+    ></iconify-icon>
+  </div>
+
+  <div class="login-container">
+
+    <!-- CREATE ACCOUNT -->
+    <div class="login-box-create login-box">
+      <h1 class="title-brand">kasb <span>car</span></h1>
+      <h2 class="text-create" data-lang-key="create_account">إنشاء حساب</h2>
+
+      <div class="input-group">
+        <label for="fullname" data-lang-key="full_name">الاسم بالكامل</label>
+        <input
+          type="text"
+          id="fullname"
+          data-lang-key="full_name_placeholder"
+          placeholder="الاسم بالكامل"
+          required
+        />
+        <small class="error-message-create" id="fullname-error"></small>
+      </div>
+
+      <div class="input-group">
+        <label for="email-create" data-lang-key="email">البريد الإلكتروني</label>
+        <input
+          type="email"
+          id="email-create"
+          data-lang-key="email_placeholder"
+          placeholder="البريد الإلكتروني"
+          required
+        />
+        <small class="error-message-create" id="email-create-error"></small>
+      </div>
+
+      <div class="input-group">
+        <label for="password-create" data-lang-key="password">كلمة المرور</label>
+        <div class="password-wrapper">
+          <input
+            type="password"
+            id="password-create"
+            data-lang-key="password_placeholder"
+            placeholder="كلمة المرور"
+            maxlength="15"
+            required
+          />
+
+          <iconify-icon icon="mdi:hide" id="hide-pass" class="toggle-password-create"></iconify-icon>
+          <iconify-icon icon="mdi:eye" id="show-pass" class="toggle-password-eye-create visibility"></iconify-icon>
+        </div>
+        <small class="error-message-create" id="password-create-error"></small>
+      </div>
+
+      <div class="input-group">
+        <label for="confirmPassword" data-lang-key="confirm_password">تأكيد كلمة المرور</label>
+        <div class="password-wrapper">
+          <input
+            type="password"
+            id="confirmPassword"
+            data-lang-key="confirm_password_placeholder"
+            placeholder="تأكيد كلمة المرور"
+            maxlength="15"
+            required
+          />
+
+          <iconify-icon icon="mdi:hide" id="hide-confirm-create" class="toggle-password-create"></iconify-icon>
+          <iconify-icon icon="mdi:eye" id="show-confirm-create" class="toggle-password-eye-create visibility"></iconify-icon>
+        </div>
+        <small class="error-message-create" id="confirmPasswordtwo-error"></small>
+      </div>
+
+      <button class="signup-btn" id="sign-up-create" data-lang-key="signup_btn">إنشاء حساب</button>
+
+      <div class="links">
+        <p data-lang-key="have_account">عندك حساب بالفعل؟</p>
+        <div id="pageloginAccount" data-lang-key="login_link">تسجيل الدخول</div>
+      </div>
+    </div>
+
+    <!-- LOGIN -->
+    <div class="login-box-login login-box">
+      <h1 class="title-brand">kasb <span>car</span></h1>
+      <h2 data-lang-key="login_title">تسجيل الدخول</h2>
+
+      <div class="input-group">
+        <label for="emaillogin" data-lang-key="email">البريد الإلكتروني</label>
+        <input
+          type="email"
+          id="emaillogin"
+          data-lang-key="email_login_placeholder"
+          placeholder="أدخل بريدك الإلكتروني"
+          required
+        />
+        <small class="error-message" id="email-error"></small>
+      </div>
+
+      <div class="input-group">
+        <label for="password" data-lang-key="password">كلمة المرور</label>
+
+        <div class="password-wrapper">
+          <input
+            type="password"
+            id="password"
+            data-lang-key="password_placeholder"
+            placeholder="أدخل كلمة المرور"
+            required
+          />
+
+          <iconify-icon icon="mdi:hide" id="Lang-icon-hide" class="toggle-password"></iconify-icon>
+          <iconify-icon icon="mdi:eye" id="Lang-icon-eye" class="toggle-password-eye visibility"></iconify-icon>
+        </div>
+
+        <small class="error-message" id="password-error"></small>
+      </div>
+
+      <button class="login-btn" id="loginbtn" data-lang-key="login_btn">دخول</button>
+
+      <div class="links">
+        <div id="pageForgetaccount" data-lang-key="forget_password">هل نسيت كلمة المرور؟</div>
+        <div id="CreateAccount" data-lang-key="create_new_account">إنشاء حساب جديد</div>
+      </div>
+    </div>
+
+    <!-- FORGET -->
+    <div class="login-box-forget login-box">
+      <h1 class="title-brand">kasb <span>car</span></h1>
+      <h2 data-lang-key="forget_title">نسيت كلمة المرور؟</h2>
+
+      <p data-lang-key="forget_desc">
+        اكتب بريدك الإلكتروني وهنبعتلك رابط استرجاع
+      </p>
+
+      <div class="input-group">
+        <label for="forget-email" data-lang-key="email">البريد الإلكتروني</label>
+
+        <input
+          type="email"
+          id="forget-email"
+          data-lang-key="email_login_placeholder"
+          placeholder="أدخل البريد الإلكتروني"
+          required
+        />
+
+        <small class="error-message" id="forget-email-error"></small>
+      </div>
+
+      <button class="send-btn" id="btnemailforget" data-lang-key="send_btn">إرسال</button>
+
+      <div class="links">
+        <a href="#" id="backpageLogin" data-lang-key="back_login">رجوع لتسجيل الدخول</a>
+      </div>
+    </div>
+
+    <!-- RESET -->
+    <div class="login-box-confirm login-box">
+      <h1 class="title-brand">kasb <span>car</span></h1>
+      <h2 data-lang-key="reset_title">إعادة تعيين كلمة المرور</h2>
+
+      <div class="input-group">
+        <label for="newPassword" data-lang-key="new_password">كلمة المرور الجديدة</label>
+        <div class="password-wrapper">
+          <input
+            type="password"
+            id="newPassword"
+            data-lang-key="new_password_placeholder"
+            placeholder="كلمة المرور الجديدة"
+            required
+            maxlength="15"
+          />
+
+          <iconify-icon icon="mdi:hide" id="hide-new" class="toggle-icon"></iconify-icon>
+          <iconify-icon icon="mdi:eye" id="show-new" class="toggle-icon visibility"></iconify-icon>
+        </div>
+        <small class="error-message" id="newPassword-error"></small>
+      </div>
+
+      <div class="input-group">
+        <label for="confirmPasswordtwo" data-lang-key="confirm_password">تأكيد كلمة المرور</label>
+        <div class="password-wrapper">
+          <input
+            type="password"
+            class="input-confirm"
+            id="confirmPasswordtwo"
+            data-lang-key="confirm_password_placeholder"
+            placeholder="تأكيد كلمة المرور"
+            required
+            maxlength="15"
+          />
+
+          <iconify-icon icon="mdi:hide" id="hide-confirm" class="toggle-icon"></iconify-icon>
+          <iconify-icon icon="mdi:eye" id="show-confirm" class="toggle-icon visibility"></iconify-icon>
+        </div>
+        <small class="error-message" id="confirmPassword-error"></small>
+      </div>
+
+      <button class="reset-btn" data-lang-key="confirm_btn">تأكيد</button>
+
+      <div id="msg" class="message"></div>
+    </div>
+
+  </div>
+</header>
     <!-- Nav-Bar -->
     <div id="toastBox"></div>
     <div class="nav-bar">
       <div class="nav-bar-container">
         <div class="nav-bar-logo">
           <h1 id="KasbCars">kasbcars</h1>
-          <div class="icon-menu-remove">
-            <iconify-icon
-              icon="mdi:menu"
-              id="tool-icon-menu"
-              class="tool-icon-menu"
-            ></iconify-icon>
-            <!-- <iconify-icon
-              icon="mdi:remove"
-              id="tool-icon-remove"
-              class="tool-icon-remove"
-            ></iconify-icon> -->
-          </div>
         </div>
         <nav class="nav-bar-links">
           <ul class="nav-bar-links-list">
-            <li class="nav-bar-link"><a href="#home" data-lang-key="nav_home">Home</a></li>
-            <li class="nav-bar-link"><a href="#about" data-lang-key="nav_about">About</a></li>
-            <li class="nav-bar-link"><a href="#shop" data-lang-key="nav_services">Services</a></li>
-            <li class="nav-bar-link"><a href="#footer" data-lang-key="nav_contact">Contact</a></li>
+            <li class="nav-bar-link">
+              <a href="#home" data-lang-key="nav_home">Home</a>
+            </li>
+            <li class="nav-bar-link">
+              <a href="#about" data-lang-key="nav_about">About</a>
+            </li>
+            <li class="nav-bar-link">
+              <a href="#shop" data-lang-key="nav_services">Services</a>
+            </li>
+            <li class="nav-bar-link">
+              <a href="#footer" data-lang-key="nav_contact">Contact</a>
+            </li>
           </ul>
         </nav>
         <div class="nav-bar-tools">
@@ -46,12 +251,15 @@
             width="24"
             class="tool-icon toastheart"
           ></iconify-icon>
-          <iconify-icon
-            icon="mdi:cart"
-            width="24"
-            id="toast"
-            class="tool-icon toast"
-          ></iconify-icon>
+          <div class="cart-total">
+            <div class="total-all">0</div>
+            <iconify-icon
+              icon="mdi:cart"
+              width="24"
+              id="toastcart"
+              class="tool-icon toast"
+            ></iconify-icon>
+          </div>
           <iconify-icon
             icon="material-symbols:brightness-6"
             width="24"
@@ -71,50 +279,24 @@
           ></iconify-icon>
         </div>
       </div>
-      <div class="mobile-app" id="mobile-app"><div class="mobile-header">
-    <iconify-icon
-      icon="mdi:close"
-      class="tool-icon close-menu"
-      id="closenav"
-    ></iconify-icon>
-  </div>
-        <nav class="nav-bar-links-res">
-          <ul class="nav-bar-links-list-res">
-            <li class="nav-bar-link"><a href="#home" data-lang-key="nav_home">Home</a></li>
-            <li class="nav-bar-link"><a href="#about" data-lang-key="nav_about">About</a></li>
-            <li class="nav-bar-link"><a href="#shop" data-lang-key="nav_services">Services</a></li>
-            <li class="nav-bar-link"><a href="#footer" data-lang-key="nav_contact">Contact</a></li>
-           
-          </ul>
-        </nav>
-        <div class="nav-bar-tools-res">
-          <iconify-icon icon="mdi:cart" id="mobile-cart-icon" class="tool-icon"></iconify-icon>
-          <iconify-icon icon="mdi:heart" id="mobile-heart-icon toast" class="tool-icon"></iconify-icon>
-        
-          <iconify-icon icon="mdi:user" id="mobile-user-icon" class="tool-icon"></iconify-icon>
-          <iconify-icon
-            icon="mdi:language"
-            width="24"
-            id="Lang-icon-res"
-            class="tool-icon"
-          ></iconify-icon>
-        </div>
-      </div>
     </div>
 
-    <div class="side-bar-carts">
+    <div class="side-bar-carts-container">
       <iconify-icon
-        icon="mdi:remove"
+        icon="mdi:close"
         class="tool-icon-remove-carts"
       ></iconify-icon>
+      <div class="side-bar-carts">
+        <!-- cart items هنا -->
+      </div>
     </div>
-    <div class="side-bar-fav">
+    <div class="side-bar-fav-container">
       <iconify-icon
         icon="mdi:remove"
         class="tool-icon-remove-fav"
       ></iconify-icon>
+      <div class="side-bar-fav"></div>
     </div>
-
     <!-- section-hero -->
     <div class="section-hero" id="home">
       <div class="sec-hero-title">
@@ -206,11 +388,15 @@
     <!-- About-toyota -->
     <section class="about-toyota" id="about">
       <div class="about-toyota-cotain">
-        <h1 class="about-toyota-text" data-lang-key="about_title">about toyota</h1>
+        <h1 class="about-toyota-text" data-lang-key="about_title">
+          about toyota
+        </h1>
         <p class="about-toyota-pragraph" data-lang-key="about_paragraph">
           Kasb Cars offers distinctive Toyota cars
         </p>
-        <button class="about-toyota-btn" data-lang-key="about_button">About to</button>
+        <button class="about-toyota-btn" data-lang-key="about_button">
+          About to
+        </button>
       </div>
     </section>
     <header class="search-cart-shop">
@@ -264,8 +450,12 @@
       <div class="footer-container">
         <div class="footer-col">
           <div class="footer-one-title">
-            <h1 class="footer-one-text" data-lang-key="footer_brand">kasb car</h1>
-            <p class="footer-one-pra" data-lang-key="footer_tagline">find your dream car</p>
+            <h1 class="footer-one-text" data-lang-key="footer_brand">
+              kasb car
+            </h1>
+            <p class="footer-one-pra" data-lang-key="footer_tagline">
+              find your dream car
+            </p>
           </div>
           <div class="footer-one-socialmedia">
             <iconify-icon
